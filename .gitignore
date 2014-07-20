@@ -7,7 +7,12 @@
 #!.bashrc
 #!.gitignore
 
-/.emacs.d/*
+.emacs.d/.*
+.emacs.d/*.dat
+.emacs.d/elpa/
+.emacs.d/auto*
+.emacs.d/projectile-*
+.emacs.d/backups/
 !/.emacs.d/init.d
 !/.emacs.d/init/*
 
