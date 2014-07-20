@@ -1,0 +1,14 @@
+[user]
+	name = bruno rasic
+	email = brunorasic@outlook.com
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	last = log -1 HEAD
+	unstage = reset HEAD --
+[color]
+    status = always
+[core]
+	editor = vi
