@@ -22,8 +22,8 @@ aptana
 .cabal
 .cache
 .codeintel
-.compiz
-.config
+.compiz*
+.config*
 .dbus
 Desktop
 Documents

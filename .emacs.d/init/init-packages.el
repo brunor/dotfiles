@@ -192,8 +192,7 @@
 (require 'auto-complete-config)
 
 ;; Haskell stuff
-(autoload 'ghc-init "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+(add-to-list 'exec-path "~/.cabal/bin")
+;;(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(add-hook 'inferior-haskell-mode-hook 'turn-on-ghci-completion)

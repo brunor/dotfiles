@@ -17,6 +17,9 @@
 ;; load system-tailored defaults you should probably edit this
 (load (concat user-emacs-directory "init/system.el"))
 
+;; start the emacs server, use this instance as client
+(server-start)
+
 ;; Load init files
 ;; (mapcar
 ;;  (lambda (f) (load-file f))
