@@ -1,0 +1,8 @@
+
+# ignore everything
+/*
+
+# add only these files
+!.profile
+!.bashrc
+!.gitignore

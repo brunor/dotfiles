@@ -44,3 +44,45 @@ export GOPATH=$HOME/repos/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 export PATH=$HOME/.cabal/bin:$PATH
+
+
+
+##-------------------------------##
+#     fillbucket                 #
+# creates new repo in bitbucket  #
+# $1 = username                  #
+# $2 = password                  #
+# $3 = reponame                  #
+# Makes a non git directory to a new private bitbucket repository with all files added to initial commit
+# Usage = fillbucket <username> <password> <reponame>
+# function fillbucket () {
+#     if [ -z "$1" ]; then
+#         echo "username:"
+#         read NAME
+#     else
+#         NAME=$1
+#     fi
+
+#     if [ -z "$2" ]; then
+#         echo "password:"
+#         read PASSWORD
+#     else
+#         PASSWORD=$1
+#     fi
+
+#     if [ -z "$3" ]; then
+#         echo "reponame:"
+#         read REPONAME
+#     else
+#         REPONAME=$1
+#     fi
+
+
+#     #git init
+#     #git add -A .
+#     #git commit -m "Initial commit"
+#     curl --user $NAME:$PASSWORD https://api.bitbucket.org/1.0/repositories/ --data name=$REPONAME --data is_private='true'
+#     git remote add origin https://$NAME@bitbucket.org/$NAME/$REPONAME.git
+#     git push -u origin --all
+#     git push -u origin --tags
+# }
