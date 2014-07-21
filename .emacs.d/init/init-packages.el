@@ -194,5 +194,28 @@
 ;; Haskell stuff
 (add-to-list 'exec-path "~/.cabal/bin")
 ;;(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+;; code alignment
+(global-set-key (kbd "C-x a r") 'align-regexp)
+;; the below can be used with M-x align-code
+;; (add-to-list 'align-rules-list
+;;               '(haskell-types
+;;                 (regexp . "\\(\\s-+\\)\\(::\\|∷\\)\\s-+")
+;;                 (modes quote (haskell-mode literate-haskell-mode))))
+;;  (add-to-list 'align-rules-list
+;;               '(haskell-assignment
+;;                 (regexp . "\\(\\s-+\\)=\\s-+")
+;;                 (modes quote (haskell-mode literate-haskell-mode))))
+;;  (add-to-list 'align-rules-list
+;;               '(haskell-arrows
+;;                 (regexp . "\\(\\s-+\\)\\(->\\|→\\)\\s-+")
+;;                 (modes quote (haskell-mode literate-haskell-mode))))
+;;  (add-to-list 'align-rules-list
+;;               '(haskell-left-arrows
+;;                 (regexp . "\\(\\s-+\\)\\(<-\\|←\\)\\s-+")
+;;                 (modes quote (haskell-mode literate-haskell-mode))))
