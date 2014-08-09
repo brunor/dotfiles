@@ -25,9 +25,9 @@ fi
 # set python virtualenvwrapper vars
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/repos
-# if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
-#    . "/usr/local/bin/virtualenvwrapper.sh"
-# fi
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+   . "/usr/local/bin/virtualenvwrapper.sh"
+fi
 
 # set golang root and path
 export GOROOT=/usr/local/go
