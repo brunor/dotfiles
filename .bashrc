@@ -112,3 +112,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+   . "/usr/local/bin/virtualenvwrapper.sh"
+fi
