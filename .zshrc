@@ -85,3 +85,7 @@ export PATH="/usr/local/pythonbrew/bin:/home/brasich/.cabal/bin:/home/brasich/bi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [ -e '.dircolors' ]; then
+    eval `dircolors -b ~/.dircolors`
+fi
