@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # set right prompt to show time
 RPROMPT='[%*]'
 
-export PATH="/usr/local/pythonbrew/bin:/home/brasich/.cabal/bin:/home/brasich/bin:/usr/lib/lightdm/lightdm:/usr/java/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
