@@ -92,4 +92,4 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-[[ -a $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
+[[ -a $HOME/.nvm/nvm.sh ]] && export NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh
