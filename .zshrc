@@ -50,7 +50,7 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cabal docker)
+plugins=(git cabal docker node nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,3 +91,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
+
+[[ -a $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
