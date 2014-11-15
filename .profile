@@ -18,13 +18,15 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
-
-# set golang root and path
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/repos/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 export PATH=$HOME/.cabal/bin:$PATH
 
+# [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+
+# if [ -x /usr/bin/dircolors ]; then
+#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+# fi
+
+[[ -a $HOME/.nvm/nvm.sh ]] && export NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh

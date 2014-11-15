@@ -114,6 +114,4 @@ if ! shopt -oq posix; then
 fi
 
 
-if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
-   . "/usr/local/bin/virtualenvwrapper.sh"
-fi
+
