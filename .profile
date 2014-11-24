@@ -21,6 +21,10 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
 
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/repos/go
+export PATH=$PATH:$GOPATH/bin
+
 export PATH=$HOME/.cabal/bin:$PATH
 
 # [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
